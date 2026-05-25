@@ -5,9 +5,9 @@
 # ------------------------------------------------------------
 # 1. Site Identity
 # ------------------------------------------------------------
-site_name: "Entoli Startup"
-site_description: "Strategic documentation for Product Entoli - Agent ecosystem for explicit, governable and traceable software development"
-site_author: "Entoli Team"
+site_name: "Wenen 2026"
+site_description: "Leanne en Hans in Oostenrijk"
+site_author: "Hans & Leanne"
 site_url: "url://localhost:8000"  # Update when publishing
 
 # Optioneel: repository referentie
@@ -18,7 +18,7 @@ site_url: "url://localhost:8000"  # Update when publishing
 # ------------------------------------------------------------
 # 2. Documentation Source
 # ------------------------------------------------------------
-docs_dir: "docs"
+docs_dir: "artefacten"
 site_dir: "site"
 
 # ------------------------------------------------------------
@@ -41,21 +41,19 @@ theme:
     - search.suggest
     - search.highlight
   palette:
-    # Overridden by custom CSS (Entoli orange #e55039)
-    primary: "deep-orange"
-    accent: "orange"
+    primary: "red"
+    accent: "red"
   font:
     text: "Segoe UI"
     code: "Consolas"
-  logo: "assets/entoli-logo-m.png"
-  favicon: "assets/entoli-logo-m.png"
+  icon:
+    logo: material/train
 
 # ------------------------------------------------------------
 # 4. Custom Styling - Entoli Stylesheet
 # Owner: Presentation Architect
 # ------------------------------------------------------------
-extra_css:
-  - style/entoli.css
+extra_css: []
 
 extra_javascript: []
 
@@ -79,7 +77,7 @@ markdown_extensions:
   - md_in_html
   - tables
   - toc:
-      permalink: true
+      permalink: false
       toc_depth: 3
 
   # Python Markdown Extensions
@@ -113,7 +111,13 @@ markdown_extensions:
 # ------------------------------------------------------------
 nav:
   - Home: index.md
-  
+  - Sightseeing overzicht: 00-sightseeing-overzicht.md
+  - Planning:
+    - Vrijdag 29 mei - Treinreis: 01-vrijdag.md
+    - Zaterdag 30 mei - Belvedere & Binnenstad: 02-zaterdag.md
+    - Zondag 31 mei - Graz & Renske: 03-zondag.md
+    - Maandag 1 juni - Schönbrunn & Prater: 04-maandag-01-juni.md
+    - Dinsdag 2 juni - Terugreis: 05-dinsdag-02-juni.md
 
 # ------------------------------------------------------------
 # 8. Extra Configuration
@@ -125,13 +129,5 @@ extra:
 # ------------------------------------------------------------
 # 9. Copyright
 # ------------------------------------------------------------
-copyright: "Copyright &copy; 2026 Maxia Consultancy. Alle rechten voorbehouden."
+copyright: "Open Source © 2026 Hans & Leanne"
 
-# ------------------------------------------------------------
-# Metadata
-# ------------------------------------------------------------
-# Gegenereerd door: Publicatie Steward
-# Template: publicatie-steward.mkdocs.template.md
-# Stylesheet: docs/styles/entoli.css (Presentatie Architect)
-# Datum: 2026-02-06
-# Versie: 1.0
