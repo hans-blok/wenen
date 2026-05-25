@@ -1,0 +1,137 @@
+# ============================================================
+# MkDocs Configuration — Entoli 
+# ============================================================
+
+# ------------------------------------------------------------
+# 1. Site Identity
+# ------------------------------------------------------------
+site_name: "Entoli Startup"
+site_description: "Strategic documentation for Product Entoli - Agent ecosystem for explicit, governable and traceable software development"
+site_author: "Entoli Team"
+site_url: "url://localhost:8000"  # Update when publishing
+
+# Optioneel: repository referentie
+# repo_name: "entoli-startup"
+# repo_url: "https://github.com/username/mandarin-startup"
+# edit_uri: "edit/main/docs/"
+
+# ------------------------------------------------------------
+# 2. Documentation Source
+# ------------------------------------------------------------
+docs_dir: "docs"
+site_dir: "site"
+
+# ------------------------------------------------------------
+# 3. Theme & Presentation
+# Entoli house style with Material theme
+# ------------------------------------------------------------
+theme:
+  name: "material"
+  language: "en"
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - content.code.copy
+    - content.code.annotate
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+  palette:
+    # Overridden by custom CSS (Entoli orange #e55039)
+    primary: "deep-orange"
+    accent: "orange"
+  font:
+    text: "Segoe UI"
+    code: "Consolas"
+  logo: "assets/entoli-logo-m.png"
+  favicon: "assets/entoli-logo-m.png"
+
+# ------------------------------------------------------------
+# 4. Custom Styling - Entoli Stylesheet
+# Owner: Presentation Architect
+# ------------------------------------------------------------
+extra_css:
+  - style/entoli.css
+
+extra_javascript: []
+
+# ------------------------------------------------------------
+# 5. Plugins
+# ------------------------------------------------------------
+plugins:
+  - search:
+      lang: en
+
+# ------------------------------------------------------------
+# 6. Markdown Extensions
+# ------------------------------------------------------------
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# ------------------------------------------------------------
+# 7. Navigation Structure
+# Primary responsibility: Publication Steward
+# ------------------------------------------------------------
+nav:
+  - Home: index.md
+  
+
+# ------------------------------------------------------------
+# 8. Extra Configuration
+# ------------------------------------------------------------
+extra:
+  social: []
+  generator: false  # Verberg "Made with Material for MkDocs"
+
+# ------------------------------------------------------------
+# 9. Copyright
+# ------------------------------------------------------------
+copyright: "Copyright &copy; 2026 Maxia Consultancy. Alle rechten voorbehouden."
+
+# ------------------------------------------------------------
+# Metadata
+# ------------------------------------------------------------
+# Gegenereerd door: Publicatie Steward
+# Template: publicatie-steward.mkdocs.template.md
+# Stylesheet: docs/styles/entoli.css (Presentatie Architect)
+# Datum: 2026-02-06
+# Versie: 1.0
