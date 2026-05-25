@@ -12,4 +12,4 @@
 | **[Zaterdag 30 mei](02-zaterdag.md)** | Belvedere, Klimt's *De Kus*, Hofburg, binnenstad | ☀️ 24°C |
 | **[Zondag 31 mei](03-zondag.md)** | Dagtrip Graz – Schwarzenegger Museum & Renske | ⛅ 22°C |
 | **[Maandag 1 juni](04-maandag-01-juni.md)** | Schönbrunn, Prater, Reuzenrad, Naschmarkt | ☀️ 25°C |
-| **[Dinsdag 2 juni](05-dinsdag-02-juni.md)** | Terugreis Wenen → München → Utrecht | ⛅ 20°C |
+| **[Dinsdag 2 juni](05-dinsdag.md)** | Terugreis Wenen → München → Utrecht | ⛅ 20°C |
