@@ -9,30 +9,59 @@ Reisplanning voor een 4-daagse trip naar Wenen van **Hans en Leanne**, van 29 me
 | **GitHub** | `https://github.com/hans/wenen-siteseeing` |
 | **GitHub Pages** | `https://hans.github.io/wenen-siteseeing` |
 
-## Programma
 
-| Dag | Thema |
-|-----|-------|
-| Vrijdag 29 mei | Treinreis Wijk bij Duurstede → Frankfurt → Wenen (aankomst 23:45) |
-| Zaterdag 30 mei | Belvedere (Klimt's *De Kus*), Hofburg, Burggarten, binnenstad |
-| Zondag 31 mei | Dagtrip Graz – Schwarzenegger Museum & bezoek Renske |
-| Maandag 1 juni | Schönbrunn, Prater, Reuzenrad, Naschmarkt, Donaukanal |
-| Dinsdag 2 juni | Terugreis Wenen → München → Utrecht (vertrek 08:30) |
+## GitHub Pages instellen
 
-## Verblijf
+### 1. Repository aanmaken op GitHub
 
-**Easy Flat Stadt Park**, Wenen
+Maak een **public** repository aan met de naam `wenen-siteseeing`.
 
-## Artefacten
+### 2. GitHub Actions workflow
 
-De dagplanningen staan in de map `artefacten/`:
+Het bestand `.github/workflows/deploy.yml` bevat de automatische deployment:
 
-- `00-sightseeing-overzicht.md` – overzicht van alle bezoeken met prijzen en boekinfo
-- `01-vrijdag.md` – treinreis en aankomst
-- `02-zaterdag.md` – Belvedere en binnenstad
-- `03-zondag.md` – dagtrip Graz
-- `04-maandag-01-juni.md` – Schönbrunn en Prater
-- `05-dinsdag-02-juni.md` – terugreis
+```yaml
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: pip install -r requirements-docs.txt
+      - run: mkdocs gh-deploy --force
+```
+
+### 3. GitHub Pages activeren
+
+> **Let op**: de branch `gh-pages` bestaat nog niet — die wordt automatisch aangemaakt door de workflow bij de eerste push naar `main`.
+
+Stappen:
+1. Push naar `main` en wacht tot de GitHub Action succesvol is afgerond
+2. Ga naar de repository op GitHub
+3. **Settings** → **Pages**
+4. Onder *Branch*: kies `gh-pages` / `/ (root)`
+5. Klik **Save**
+
+De site is na de eerste succesvolle build beschikbaar op:
+`https://hans.github.io/wenen-siteseeing`
+
+### 4. site_url instellen in mkdocs.yml
+
+```yaml
+site_url: "https://hans.github.io/wenen-siteseeing"
+```
 
 ## Installatie
 
