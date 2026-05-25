@@ -6,8 +6,8 @@ Reisplanning voor een 4-daagse trip naar Wenen van **Hans en Leanne**, van 29 me
 
 | | |
 |---|---|
-| **GitHub** | `https://github.com/hans/wenen-siteseeing` |
-| **GitHub Pages** | `https://hans.github.io/wenen-siteseeing` |
+| **GitHub** | `https://github.com/hans-blok/wenen` |
+| **GitHub Pages** | `https://hans-blok.github.io/wenen` |
 
 
 ## GitHub Pages instellen
@@ -55,12 +55,12 @@ Stappen:
 5. Klik **Save**
 
 De site is na de eerste succesvolle build beschikbaar op:
-`https://hans.github.io/wenen-siteseeing`
+`https://hans-blok.github.io/wenen`
 
 ### 4. site_url instellen in mkdocs.yml
 
 ```yaml
-site_url: "https://hans.github.io/wenen-siteseeing"
+site_url: "https://hans-blok.github.io/wenen"
 ```
 
 ## Installatie
